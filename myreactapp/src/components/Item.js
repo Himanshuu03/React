@@ -1,8 +1,10 @@
 import './Item.css';
-function Item() {
+function Item(props) {
+    const itemName = props.name;
     return(
         <>
-          <p>Item1</p>
+          <p>{itemName}</p>
+          {props.children}
         </>
     )
 }

@@ -1,12 +1,15 @@
 import './Itemdate.css'
 
-function Itemdata(){
+function Itemdata(props){
+    const day = props.day;
+    const month = props.month;
+    const year = props.year;
     return(
-        <>
-        <div> 20 june 1998</div>
-        <div> 19 june 1998</div>
-        <div> 18 june 1998</div>
-        </>
+        <div className = "mfg-date">
+        <span>{day}</span>
+        <span>{month}</span>
+        <span>{year}</span>
+        </div>
     )
 }
 export default Itemdata;
