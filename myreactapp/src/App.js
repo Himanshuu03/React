@@ -3,11 +3,8 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>Himanshu</h1>
-      </header>
+      Himanshu
     </div>
   );
 }
-
-export default App;
+export default App;  
