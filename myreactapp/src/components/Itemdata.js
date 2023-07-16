@@ -1,7 +1,7 @@
 import './Itemdate.css'
 
 function Itemdata(props){
-    const day = props.day;
+    const day = props.day; 
     const month = props.month;
     const year = props.year;
     return(
