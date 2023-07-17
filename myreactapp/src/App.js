@@ -27,7 +27,8 @@ function App() {
   return (
     <>
       <Card>
-        <Item name={respone[0].itemName}>Hello I'm am first item</Item>
+        <Item name={respone[0].itemName} class="applytext">
+          Hello I'm am first item</Item>
         <Itemdata
           day={respone[0].itemDay}
           month={respone[0].itemMonth}

@@ -3,7 +3,7 @@ function Item(props) {
     const itemName = props.name;
     return(
         <>
-          <p>{itemName}</p>
+          <p className ={props.class}>{itemName}</p>
           {props.children}
         </>
     )
