@@ -2,7 +2,8 @@ import "./App.css";
 import Item from "./components/Item";
 import Itemdata from "./components/Itemdata";
 import Card from "./components/Card";
-function App() {
+import NewProduct from "./components/NewProduct";
+function App(props) {
   const itemTwoname = "item2";
   const respone = [
     {
@@ -24,9 +25,18 @@ function App() {
       itemYear: "1989",
     },
   ];
+  function propsData(data){
+    
+    console.log(data);
+  }
+  function fetchName(name){
+    console.log("i am in app.js")
+    console.log(name)
+  }
   return (
     <>
       <Card>
+        <NewProduct printData={propsData} fetch={fetchName}/>
         <Item name={respone[0].itemName} class="applytext">
           Hello I'm am first item</Item>
         <Itemdata

@@ -1,3 +1,4 @@
+
 import './Item.css';
 import {useState} from 'react';
 function Item(props) {
@@ -5,7 +6,7 @@ function Item(props) {
     //state
     const[itemName,setItemName] = useState(props.name);
     function clickHandler(){
-      setItemName("nirma");
+      setItemName(`${itemName} -added`);
       console.log("button clicked");
     }
     return(
