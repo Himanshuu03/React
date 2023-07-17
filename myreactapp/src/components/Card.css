@@ -1,5 +1,5 @@
 .Card{
     display: flex;
     flex-direction: column;
-    color: white;
+    /* color: white; */
 }
