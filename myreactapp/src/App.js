@@ -26,7 +26,6 @@ function App(props) {
     },
   ];
   function propsData(data){
-    
     console.log(data);
   }
   function fetchName(name){

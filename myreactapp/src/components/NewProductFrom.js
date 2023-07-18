@@ -21,7 +21,7 @@ function NewProductForm(props){
         }
 
         // console.log(productData);
-        props.onSaveProduct(productData);
+        // props.onSaveProduct(productData);
         props.onfetch("HImanshuuuu");
         setDate('');
         setTitle('');
