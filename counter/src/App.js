@@ -1,26 +1,12 @@
-import logo from "./logo.svg";
-import {useState} from 'react';
 import "./App.css";
 
 function App() {
-
-  const [data, setData] = useState(0);
-
-  function incrementHandler(){
-    setData(data+1);
-  }
-  function decrementHandler() { 
-    setData(data-1); 
-  }
   return (
-    <div className="App">
-      <h1>Counter</h1>
-      <div className="counter">
-        <button onClick={incrementHandler}>+</button>
-        <p>{data}</p>
-        <button onClick={decrementHandler}>- </button>
-      </div>
-    </div>
+    <main class="flex justify-center gap-4 flex-col min-h-screen">
+      <h1 class="text-3xl text-center font-bold underline">React & Tailwind CSS Starter Pack</h1>
+      <p class="text-center text-xl">This is a starter pack for React & Tailwind CSS projects.</p>
+      <img src="https://bit.ly/3wsmzTy" alt="meme" class="mx-auto" />
+    </main>
   );
 }
 
