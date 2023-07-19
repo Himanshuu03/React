@@ -16,7 +16,7 @@ export const filterData = [
     title: "Design",
   },
   {
-    id: "5",
+    id: "5", 
     title: "Lifestyle",
   },
 ];
