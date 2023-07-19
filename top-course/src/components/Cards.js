@@ -1,21 +1,28 @@
 import Card from "./Card";
-import React from "react";
-function Cards({courses}) {
-    let allCourses=[];
-    const getCourse=()=>{
-        Object.values(courses).forEach((e)=>{
-            e.forEach((ev)=>{
-                allCourses.push(ev);
+import React, { useState } from "react";
+function Cards(props) {
+    let course = props.course;
+    let check = props.check;
+    const [selectCourse,setSelectCourse] = useState([]);
+    function getCourse(){
+    if(check === "All"){
+            let allCourses =[];
+            Object.values(course).forEach((array)=>{
+                array.forEach((courseData)=>{
+                    allCourses.push(courseData);
+                })
             })
-        })
-        return allCourses;
+            return allCourses;
+        }
+        else{
+            return course[check];
+        }
     }
     return (
-        <div>
-            {
-                getCourse().map((course)=>{
+        <div className="flex flex-wrap justify-center gap-4 mb-4">{
+                getCourse().map((cour)=>{
                     return(
-                        <Card key={course.id} course={course}></Card>
+                        <Card key={cour.id} cour ={cour} selectCourse={selectCourse} setSelectCourse={setSelectCourse}></Card>
                     )
                 })
             }
