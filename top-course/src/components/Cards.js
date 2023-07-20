@@ -6,7 +6,7 @@ function Cards(props) {
     const [selectCourse,setSelectCourse] = useState([]);
     function getCourse(){
     if(check === "All"){
-            let allCourses =[];
+            let allCourses =[]; 
             Object.values(course).forEach((array)=>{
                 array.forEach((courseData)=>{
                     allCourses.push(courseData);

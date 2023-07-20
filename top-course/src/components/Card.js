@@ -8,7 +8,7 @@ function Card(props) {
   let desc = cour.description.length > 100 ? `${((cour.description).substring(0,100))}...`:(cour.description);
   function clickHandler(){
     if(selectCourse.includes(cour.id)){
-      setSelectCourse((e) => (e.filter((cid) => (cid !== cour.id))));
+        setSelectCourse((e) => (e.filter((cid) => (cid !== cour.id))));
       toast.warning("like removed");
     }
     else{

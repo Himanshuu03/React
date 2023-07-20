@@ -2,6 +2,7 @@ import React from "react";
 function Filter(props) {
     let filterData = props.filterData;
     let setCheck = props.setCheck;
+    let check = props.check;
     function clickHandLE(title){
         setCheck(title)
     }
@@ -11,7 +12,12 @@ function Filter(props) {
             filterData.map( (data) => {
                 return <button 
                 className={`text-lg px-2 py-1 rounded-md font-medium 
-                text-white bg-black hover:bg-opacity-50 border-2 transition-all duration-300`}
+                text-white bg-black hover:bg-opacity-50 border-2 transition-all duration-300 
+
+                ${check === data.title ? 
+                    "bg-opacity-60 border-white" :
+                    "bg-opacity-40 border-transparent"}
+                `}
                 key={data.id} onClick={()=>clickHandLE(data.title)}>{data.title}</button>
             })
             }

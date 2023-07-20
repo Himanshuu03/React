@@ -32,7 +32,7 @@ const App = () => {
       <Navbar title ="Top Course"></Navbar>
       </div>
       <div>
-      <Filter filterData={filterData} setCheck={setCheck}></Filter>
+      <Filter filterData={filterData} setCheck={setCheck} check ={check}></Filter>
       </div>
 
       <div className="w-11/12 max-w-[1200px] mx-auto flex flex-wrap justify-center items-center min-h-[50vh]">
