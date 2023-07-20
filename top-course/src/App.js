@@ -16,10 +16,9 @@ const App = () => {
       const respone = await fetch(apiUrl);
       const result = await respone.json();
       setCourse(result.data);
-      console.log(result.data)
     } catch (error) {
       toast.error("Error in api call")
-    }
+    } 
     setLoading(false);
   }
   useEffect(()=>{
@@ -36,7 +35,7 @@ const App = () => {
       </div>
 
       <div className="w-11/12 max-w-[1200px] mx-auto flex flex-wrap justify-center items-center min-h-[50vh]">
-        {loading ?(<Loading></Loading>):(<Cards course={course} check={check} ></Cards>)}
+        {loading ?(<Loading></Loading>):(<Cards course={course} check={check}></Cards>)}
       </div>
     </div>
   );
