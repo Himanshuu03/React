@@ -12,10 +12,10 @@ export default function Card(props) {
          </div>
          </div>
          <div className='text-center mt-7'>
-            <p className='font-bold text-2xl capitalize'>{review.name}</p>
+            <p className='font-bold text-2xl capitalize tracking-wider'>{review.name}</p>
          </div>
          <div className='text-center mt-2'>
-            <p className='text-violet-300 uppercase text-sm'>{review.jobs}</p>
+            <p className='text-violet-300 uppercase text-sm'>{review.job}</p>
          </div>
          <div className='text-violet-400 mx-auto mt-5'>
             <FaQuoteLeft></FaQuoteLeft>
@@ -26,19 +26,6 @@ export default function Card(props) {
          <div className='text-violet-400 mx-auto mt-5'>
             <FaQuoteRight></FaQuoteRight>
          </div>
-         <div className='flex text-3xl mt-5 gap-3 text-violet-400 font-bold mx-auto'>
-            <button className='cursor-pointer hover:text-violet-500'>
-                &lt;
-            </button>
-            <button  className='cursor-pointer hover:text-violet-500'>
-                &gt;
-            </button>
-            </div>
-        <div>
-            <button className='bg-violet-400 hover:bg-violet-500 transition-all duration-200 cursor-pointer px-10 py-2 rounded-md font-bold text-white text-lg'>
-                Surprise Me
-            </button>
-        </div>
         </div>
   );
 }
