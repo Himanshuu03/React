@@ -18,7 +18,8 @@ function App() {
     email :"",
     comment :"",
     isVisible :true,
-    mode : true
+    mode : true,
+    favCar :""
   })
   console.log(formData.email);
   function changeHandler(event){
@@ -58,6 +59,19 @@ function App() {
         <br/>
         <input type='radio' onChange={changeHandler} name="mode" id="offMode" value="offmode" checked={formData.mode === "offmode"}></input>
         <label htmlFor='offMode'>Oof</label>
+        <br/>
+        <br/>
+        <label htmlFor='favCar'>favCar</label>
+        <select  onChange={changeHandler} name='favCar' id="favCar" value={formData.favCar}>
+        <option value="scorpio">Scarpio</option>
+        <option value="legender">legender</option>
+        <option value="tharr">tharr</option>
+        <option value="defender">defender</option>
+        </select>
+        {/* <input type="submit"></input> */}
+        <br/>
+        <br/>
+        <button>Submit</button>
       </form>
     </div>
   );
