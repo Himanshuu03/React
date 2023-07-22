@@ -21,7 +21,6 @@ function App() {
     mode : true,
     favCar :""
   })
-  console.log(formData.email);
   function changeHandler(event){
     const {name ,value ,checked ,type} = event.target;
     setFormData(prevFormData =>{
@@ -33,10 +32,14 @@ function App() {
       }
     })
   }
-  console.log(formData);
+  function submitHandler(event){
+    event.preventDefault();
+    console.log("Finally printing data .....")
+    console.log(formData);
+  }
   return (
     <div className="App">
-      <form>
+      <form onSubmit={submitHandler}>
         <input type="text" placeholder="first name" onChange={changeHandler} name="firstName" value={formData.firstName}></input>
         <br/>
         <br/>
