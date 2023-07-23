@@ -6,9 +6,13 @@ export default function Aboutus() {
     function clickHandler(){
         navigate("/support")
     }
+    function backHandler(){
+        navigate(-1);
+    }
   return (
     <div>Aboutus
         <button onClick={clickHandler}>Move to support page</button>
+        <button onClick={backHandler}>Go Back</button>
     </div>
   )
 }
