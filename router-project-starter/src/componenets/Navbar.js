@@ -52,7 +52,8 @@ export default function Navbar(props) {
 
            { isLoggedIn &&
             <Link to="/dashboard">
-                 <button>Dashboard</button>
+                 <button className='bg-richblack-800 text-richblack-100 py-[8px] px-[12px] border border-richblack-700 rounded-[8px]'
+                 >Dashboard</button>
             </Link>
            }
         </div>
