@@ -19,7 +19,7 @@ export const Random = () => {
     //     fetchData();
     // },[])
 
-    const {gif,loading,fetchData} = useGif("");
+    const {gif,loading,fetchData} = useGif();
     function clickHandler(){
         fetchData(); 
     }
