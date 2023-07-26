@@ -1,10 +1,10 @@
 import React, { useContext } from 'react'
 import { AppContext } from '../context/AppContext'
 
-export default function Pagination() {
+export default function Pagination({dark}) {
     const {page,handleChangePage,totalPage,loading} = useContext(AppContext);
   return (
-    <div className='w-full flex justify-center items-center border fixed bottom-0 bg-white'>
+    <div className={`${dark?'bg-black text-white' : ' bg-white text-black border '} w-full flex justify-center items-center fixed bottom-0`}>
         {
             loading ? (<div></div>):
             (

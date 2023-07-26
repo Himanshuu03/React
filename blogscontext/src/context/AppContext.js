@@ -1,5 +1,6 @@
 import { createContext, useEffect, useState } from "react";
 import {baseUrl} from '../baseUrl';
+import axios from 'axios';
 
 export const AppContext = createContext();
 
@@ -14,11 +15,15 @@ export default function AppContextProvider({children}){
         setLoading(true);
         const finalUrl = `${baseUrl}?page=${page}`
         try{
-            const response = await fetch(finalUrl);
-            const result = await response.json();
-            setPage(result.page);
-            setPost(result.posts);
-            setTotalPage(result.totalPages);
+            // const result = await axios.get(finalUrl);
+            // const result = await response.json();
+            // const {data} = result;
+            // console.log(data); 
+            const {data} = await axios.get(finalUrl);
+            console.log(data);
+            setPage(data.page);
+            setPost(data.posts);
+            setTotalPage(data.totalPages);
         }
         catch(e){
             console.log("error")
@@ -33,12 +38,10 @@ export default function AppContextProvider({children}){
         setPage(page);
         fetchBlogPost(page);
     }
-
     const value ={
-        post,setPost,loading,setLoading,totalPage,setTotalPage,page,setPage,fetchBlogPost,handleChangePage
+        loading,setLoading,post,setPost,page,setPage,totalPage,setTotalPage,handleChangePage,fetchBlogPost
     }
-
     return<AppContext.Provider value={value}>
         {children}
-        </AppContext.Provider>
+    </AppContext.Provider>
 }

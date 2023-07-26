@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useContext, useEffect ,useState } from "react";
 import Blogs from "./components/Blogs";
 import Header from "./components/Header";
 import Pagination from "./components/Pagination";
@@ -8,15 +8,18 @@ import './App.css'
 export default function App() {
     const {fetchBlogPost} = useContext(AppContext);
 
+    const [dark,setDark] = useState(false);
+
     useEffect(()=>{
       fetchBlogPost();
     },[])
-
   return (
-    <div className="w-full h-full flex flex-col justify-center items-center gap-y-1">
-      <Header/>
+    <div className={`${dark ? "text-white bg-black" : "bg-white text-black"}
+     w-full h-full flex flex-col justify-center items-center gap-y-1`}>
+      <Header setDark={setDark} dark={dark}/>
       <Blogs/>
-      <Pagination/>
+      <Pagination dark={dark} />
     </div>
   );
 }
+
