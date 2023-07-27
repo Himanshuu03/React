@@ -26,7 +26,7 @@ export default function App() {
     else{
       fetchBlogPosts(Number(page))
     }
-  },[location.pathname, location.search]);
+  },[location.pathname, location.seah]);
 
   return (
     <>
